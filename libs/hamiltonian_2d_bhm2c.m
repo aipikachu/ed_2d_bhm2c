@@ -36,21 +36,21 @@ if numel(Jx_up) == 1
 else
     switch BDC
         case 'oo'
-            if sum(size(Jx_up) == [max(Ly-1,1),Lx-1],2) == 2
+            if sum(size(Jx_up) == [max(Ly-1,1),max(Lx-1,1)],2) == 2
                 Jx_up_lt = reshape(Jx_up',1,[]);
                 Jx_up_tag = 0;
             else
                 error('Error! Invalid input parameter of "Jx_up"!')
             end
         case 'op'
-            if sum(size(Jx_up) == [Ly-1,Lx],2) == 2
+            if sum(size(Jx_up) == [max(Ly-1,1),Lx],2) == 2
                 Jx_up_lt = reshape(Jx_up',1,[]);
                 Jx_up_tag = 0;
             else
                 error('Error! Invalid input parameter of "Jx_up"!')
             end
         case 'po'
-            if sum(size(Jx_up) == [Ly,Lx-1],2) == 2
+            if sum(size(Jx_up) == [Ly,max(Lx-1,1)],2) == 2
                 Jx_up_lt = reshape(Jx_up',1,[]);
                 Jx_up_tag = 0;
             else
@@ -74,21 +74,21 @@ if numel(Jx_dn) == 1
 else
     switch BDC
         case 'oo'
-            if sum(size(Jx_dn) == [max(Ly-1,1),Lx-1],2) == 2
+            if sum(size(Jx_dn) == [max(Ly-1,1),max(Lx-1,1)],2) == 2
                 Jx_dn_lt = reshape(Jx_dn',1,[]);
                 Jx_dn_tag = 0;
             else
                 error('Error! Invalid input parameter of "Jx_dn"!')
             end
         case 'op'
-            if sum(size(Jx_dn) == [Ly-1,Lx],2) == 2
+            if sum(size(Jx_dn) == [max(Ly-1,1),Lx],2) == 2
                 Jx_dn_lt = reshape(Jx_dn',1,[]);
                 Jx_dn_tag = 0;
             else
                 error('Error! Invalid input parameter of "Jx_dn"!')
             end
         case 'po'
-            if sum(size(Jx_dn) == [Ly,Lx-1],2) == 2
+            if sum(size(Jx_dn) == [Ly,max(Lx-1,1)],2) == 2
                 Jx_dn_lt = reshape(Jx_dn',1,[]);
                 Jx_dn_tag = 0;
             else
@@ -112,21 +112,21 @@ if numel(Jy_up) == 1
 else
     switch BDC
         case 'oo'
-            if sum(size(Jy_up) == [Ly-1,Lx-1],2) == 2
+            if sum(size(Jy_up) == [max(Ly-1,1),max(Lx-1,1)],2) == 2
                 Jy_up_lt = reshape(Jy_up',1,[]);
                 Jy_up_tag = 0;
             else
                 error('Error! Invalid input parameter of "Jy_up"!')
             end
         case 'op'
-            if sum(size(Jy_up) == [Ly-1,Lx],2) == 2
+            if sum(size(Jy_up) == [max(Ly-1,1),Lx],2) == 2
                 Jy_up_lt = reshape(Jy_up',1,[]);
                 Jy_up_tag = 0;
             else
                 error('Error! Invalid input parameter of "Jy_up"!')
             end
         case 'po'
-            if sum(size(Jy_up) == [Ly,Lx-1],2) == 2
+            if sum(size(Jy_up) == [Ly,max(Lx-1,1)],2) == 2
                 Jy_up_lt = reshape(Jy_up',1,[]);
                 Jy_up_tag = 0;
             else
@@ -150,21 +150,21 @@ if numel(Jy_dn) == 1
 else
     switch BDC
         case 'oo'
-            if sum(size(Jy_dn) == [Ly-1,Lx-1],2) == 2
+            if sum(size(Jy_dn) == [max(Ly-1,1),max(Lx-1,1)],2) == 2
                 Jy_dn_lt = reshape(Jy_dn',1,[]);
                 Jy_dn_tag = 0;
             else
                 error('Error! Invalid input parameter of "Jy_dn"!')
             end
         case 'op'
-            if sum(size(Jy_dn) == [Ly-1,Lx],2) == 2
+            if sum(size(Jy_dn) == [max(Ly-1,1),Lx],2) == 2
                 Jy_dn_lt = reshape(Jy_dn',1,[]);
                 Jy_dn_tag = 0;
             else
                 error('Error! Invalid input parameter of "Jy_dn"!')
             end
         case 'po'
-            if sum(size(Jy_dn) == [Ly,Lx-1],2) == 2
+            if sum(size(Jy_dn) == [Ly,max(Lx-1,1)],2) == 2
                 Jy_dn_lt = reshape(Jy_dn',1,[]);
                 Jy_dn_tag = 0;
             else

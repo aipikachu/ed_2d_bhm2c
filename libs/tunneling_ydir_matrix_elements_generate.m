@@ -92,7 +92,11 @@ switch BDCy
         for kk = 1:Ly-1
             for jj = 1:Lx
                 ia = (kk-1)*Lx + jj;
-                ib = ia + Lx;             
+                ib = ia + Lx; 
+                
+                fprintf(['current generating tunneling elements ',...
+                    'between sites %02d and %02d.\n'],ia,ib)
+                t_jCur = tic;
                 
                 field_cur = ['site_',num2str(ia),'_',num2str(ib)];
                 
@@ -208,6 +212,9 @@ switch BDCy
                 idx_dn_ilt = cat(1,idx_dn_ilt,seq_stat_nxt);
                 idx_dn_jlt = cat(1,idx_dn_jlt,seq_stat_cur);
                 idx_dn_klt = cat(1,idx_dn_klt,coeff_dn_stat);
+                
+                tDJc = toc(t_jCur);
+                fprintf('elapsed time is %.6f seconds.\n',tDJc)
                 
             end
         end
@@ -218,6 +225,10 @@ switch BDCy
                 ia = (kk-1)*Lx + jj;
                 ib = mod(kk,Ly)*Lx + jj;
                 
+                fprintf(['current generating tunneling elements ',...
+                    'between sites %02d and %02d.\n'],ia,ib)
+                t_jCur = tic;
+                
                 field_cur = ['site_',num2str(ia),'_',num2str(ib)];
                 
                 % step_01: for |up> state
@@ -332,6 +343,9 @@ switch BDCy
                 idx_dn_ilt = cat(1,idx_dn_ilt,seq_stat_nxt);
                 idx_dn_jlt = cat(1,idx_dn_jlt,seq_stat_cur);
                 idx_dn_klt = cat(1,idx_dn_klt,coeff_dn_stat);
+                
+                tDJc = toc(t_jCur);
+                fprintf('elapsed time is %.6f seconds.\n',tDJc)
                 
             end
         end

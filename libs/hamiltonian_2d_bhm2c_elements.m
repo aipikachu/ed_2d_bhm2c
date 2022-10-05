@@ -19,42 +19,6 @@ end
 ham_elems = struct();
 
 
-%% Input parameter check
-% TAG_s = true;
-% cache_name = 'ham_elems_cache.mat';
-% 
-% try
-%     cache_dir = [pwd,filesep,'cache'];
-%     cache_info = load([cache_dir,filesep,cache_name]);
-%     if (~strcmp(cache_info.BDCx,BDCx)) ...
-%             || (~strcmp(cache_info.BDCy,BDCy)) ...
-%             || (cache_info.basis.nMax ~= basis.nMax) ...
-%             || (cache_info.basis.L ~= basis.L) ...
-%             || (cache_info.basis.Lx ~= basis.Lx) ...
-%             || (cache_info.basis.Ly ~= basis.Ly) ...
-%             || (cache_info.basis.N_up ~= basis.N_up) ...
-%             || (cache_info.basis.N_dn ~= basis.N_dn)
-%         TAG_s = false; 
-%     end
-% catch
-%     TAG_s = false;    
-% end
-
-%
-% if TAG_s
-%     try
-%         ham_elems = cache_info.ham_elems;
-%         fprintf('Using the cache data!\n')
-%         return
-%     catch
-%         fprintf('No cache data!\n')
-%         fprintf('Re-generate the hamiltonian elements!\n')
-%     end
-% else
-%     fprintf('Re-generate the hamiltonian elements!\n')
-% end
-
-
 %%
 n_bs = basis.n_bs;
 L = basis.L;
